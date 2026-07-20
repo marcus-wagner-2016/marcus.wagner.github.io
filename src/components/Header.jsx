@@ -1,8 +1,11 @@
+import './header.css'
+
 function Header() {
   return (
-    <header>
-      <h1>Marcus Wagner</h1>
-      <p className="subtitle">Portfolio</p>
+    <header className="portfolio-header">
+      <div className="portfolio-header-inner">
+        
+      </div>
     </header>
   )
 }
