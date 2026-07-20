@@ -1,10 +1,10 @@
+import Header from './components/Header'
+import Footer from './components/Footer'
+
 function App() {
   return (
     <>
-      <header>
-        <h1>Marcus Wagner</h1>
-        <p className="subtitle">Portfolio</p>
-      </header>
+      <Header />
 
       <main>
         <section id="about">
@@ -30,9 +30,7 @@ function App() {
         </section>
       </main>
 
-      <footer>
-        <p>&copy; {new Date().getFullYear()} Marcus Wagner</p>
-      </footer>
+      <Footer />
     </>
   )
 }
