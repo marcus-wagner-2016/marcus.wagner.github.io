@@ -4,7 +4,15 @@ header.portfolio-header {
 
 }
 
-.subtitle {
-  color: var(--text);
-  margin: 4px 0 0;
+
+.portfolio-header-inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+img.portfolio-logo {
+  max-width: 6em;
+  width: 100%;
 }

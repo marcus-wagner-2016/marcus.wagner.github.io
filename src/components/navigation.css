@@ -1,0 +1,114 @@
+.portfolio-nav {
+  position: relative;
+}
+
+.portfolio-nav a {
+  color: #000;
+  font-weight: 600;
+  padding: 4px 2px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.portfolio-nav a::after {
+  background: currentColor;
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 100%;
+  transition: right 0.2s ease;
+}
+
+.portfolio-nav a:hover::after {
+  right: 0;
+}
+
+.portfolio-nav ul {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  height: 32px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 4px;
+  width: 32px;
+}
+
+.portfolio-nav-toggle span {
+  background: #000;
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.portfolio-nav-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.portfolio-nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.portfolio-nav-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  .portfolio-nav ul {
+    align-items: center;
+    background: var(--bg, #fff);
+    border: 1px solid var(--border, #e5e4e7);
+    border-radius: 12px;
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    left: 0;
+    margin: 0 auto;
+    max-height: 0;
+    max-width: 240px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 20px 0;
+    padding-bottom: 0;
+    padding-top: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    transform: translateY(-94px, -6px);
+    transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease,
+      padding 0.3s ease;
+    width: max-content;
+    z-index: 10;
+  }
+
+  .portfolio-nav ul.open {
+    max-height: 300px;
+    opacity: 1;
+    padding: 20px;
+    pointer-events: auto;
+    transform: translate(-94px, 0);
+    width: max-content;
+  }
+
+  .portfolio-nav-toggle {
+    display: flex;
+  }
+}
